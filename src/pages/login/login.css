@@ -1,0 +1,113 @@
+@keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: crimson;
+  }
+  
+  .overall {
+    width: 35%;
+    height: 70%;
+    background-color: rgba(240, 248, 255, 0.315);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 4s infinite ease-in-out;
+  }
+  
+  .first-child,
+  .second-child,
+  .third-child,
+  .fourth-child {
+    width: 85%;
+    height: 85%;
+    background-color: rgba(240, 248, 255, 0.319);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 4s infinite ease-in-out;
+  }
+  
+  .second-child {
+    width: 80%;
+    height: 80%;
+    animation-delay: 1s;
+  }
+  
+  .third-child {
+    width: 80%;
+    height: 80%;
+    animation-delay: 2s;
+  }
+  
+  .fourth-child {
+    width: 80%;
+    height: 80%;
+    animation-delay: 3s;
+  }
+  
+  .signIn {
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    color: crimson;
+    background-color: transparent;
+  }
+
+  .signIn:hover {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .overall {
+        width: 60%;
+        height: 50%;
+    }
+
+    .first-child,
+    .second-child,
+    .third-child,
+    .fourth-child {
+        width: 95%;
+        height: 95%;
+    }
+
+    .signIn {
+        font-size: 1.15rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* For Phones */
+@media (max-width: 480px) {
+    .overall {
+        width: 80%;
+        height: 40%;
+    }
+
+    .first-child,
+    .second-child,
+    .third-child,
+    .fourth-child {
+        width: 80%;
+        height: 80%;
+    }
+
+    .signIn {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
